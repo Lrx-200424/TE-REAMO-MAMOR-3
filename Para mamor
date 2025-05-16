@@ -1,42 +1,78 @@
-import turtle
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para mi Diosa Hermosa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .letter {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .date {
+            text-align: right;
+            font-style: italic;
+            color: #777;
+        }
+        .signature {
+            margin-top: 50px;
+            text-align: right;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 24px;
+            color: #e74c3c;
+        }
+        .heart {
+            color: #e74c3c;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter">
+        <div class="date" id="current-date"></div>
+        
+        <h1>Para el amor de mi vida <span class="heart">♥</span></h1>
+        
+        <p>Mi Diosa Hermosa,</p>
+        
+        <p>Eres un deseo de las estrellas para mi corazón, como cada mañana desde que entraste en mi vida. Quería escribirte estas palabras para recordarte lo especial que eres para mí.</p>
+        
+        <p>Desde que te conocí, mi mundo cambió por completo. Tu sonrisa ilumina mis días más oscuros, tu voz es la melodía que calma mi alma y tu amor es el regalo más valioso que he recibido.</p>
+        
+        <p>Recuerdo la primera vez que te vi, cómo mi corazón latió más fuerte sin entender por qué. Ahora lo sé: era el universo preparándome para conocer a mi media naranja, a mi compañera de vida.</p>
+        
+        <p>Prometo seguir amándote en cada amanecer, en cada atardecer y en todas las horas que pasen entre ellos. Prometo ser tu apoyo, tu refugio y tu mayor fan. Prometo crecer a tu lado y construir juntos un futuro lleno de felicidad.</p>
+        
+        <p>Eres mi sueño hecho realidad, mi razón para ser mejor cada día y mi mayor fortuna. Gracias por elegirme, por amarme y por permitirme amarte.</p>
+        
+        <p>Con todo mi amor,</p>
+        
+        <div class="signature" id="signature">[Tu Nombre]</div>
+    </div>
 
-# Configuración inicial
-screen = turtle.Screen()
-screen.bgcolor("black")
-heart = turtle.Turtle()
-heart.speed(2)
-heart.color("red")
-heart.width(2)
-
-# Dibuja un corazón
-heart.begin_fill()
-heart.left(50)
-heart.forward(100)
-heart.circle(40, 180)
-heart.left(260)
-heart.circle(40, 180)
-heart.forward(100)
-heart.end_fill()
-
-# Escribe un mensaje
-heart.penup()
-heart.goto(0, -70)
-heart.color("white")
-heart.write("Para ti, mi amor", align="center", font=("Arial", 14, "bold"))
-heart.hideturtle()
-
-turtle.done()
-import random
-
-sujetos = ["Tus ojos", "Tu sonrisa", "Tu voz", "Tu alma"]
-verbos = ["brillan como", "iluminan mi", "son más dulces que", "me hacen volar como"]
-complementos = ["el sol de la mañana.", "un rayo de luna.", "la melodía más bella.", "un sueño hecho realidad."]
-
-poema = (
-    f"{random.choice(sujetos)} {random.choice(verbos)} {random.choice(complementos)}\n"
-    f"Eres lo más hermoso que me ha pasado.\n"
-    f"Te amo más que a nada en este mundo."
-)
-
-print("\n💌 Poema para ti:\n")
-print(poema)
+    <script>
+        // Fecha actual
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const today = new Date();
+        document.getElementById('current-date').textContent = today.toLocaleDateString('es-ES', options);
+        
+         document.getElementById('signature').textContent = 'Don pendejo';
+    </script>
+</body>
+</html>
